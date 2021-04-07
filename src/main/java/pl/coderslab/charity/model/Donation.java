@@ -1,4 +1,4 @@
-package pl.coderslab.model;
+package pl.coderslab.charity.model;
 
 import lombok.Getter;
 import lombok.Setter;

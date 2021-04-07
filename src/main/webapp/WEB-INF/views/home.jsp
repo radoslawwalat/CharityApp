@@ -83,13 +83,10 @@
     <!-- SLIDE 1 -->
     <div class="help--slides active" data-id="1">
         <p>W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy.
-            Możesz sprawdzić czym się zajmują. ${institute.description}
-            ${institute.name} </p>
+            Możesz sprawdzić czym się zajmują.</p>
 
         <ul class="help--slides-items">
             <li>
-                ${institute.description}
-                ${institute.name}
                 <c:forEach items="${InstitutionsColOne}" var="institution">
                     <div class="col">
                         <div class="title">Fundacja "${institution.name}"</div>

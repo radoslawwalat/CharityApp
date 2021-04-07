@@ -8,8 +8,8 @@
         <version>2.4.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>pl</groupId>
-    <artifactId>coderslab</artifactId>
+    <groupId>pl.coderslab</groupId>
+    <artifactId>charity</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>charity</name>
     <description>Charity project, created with love in CodersLab</description>

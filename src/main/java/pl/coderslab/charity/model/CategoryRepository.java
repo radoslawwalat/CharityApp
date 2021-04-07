@@ -1,4 +1,4 @@
-package pl.coderslab.model;
+package pl.coderslab.charity.model;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
