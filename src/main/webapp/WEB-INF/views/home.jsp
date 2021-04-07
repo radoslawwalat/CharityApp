@@ -91,10 +91,10 @@
                 ${institute.description}
                 ${institute.name}
                 <c:forEach items="${InstitutionsColOne}" var="institution">
-                <div class="col">
-                    <div class="title">Fundacja "${institution.name}"</div>
-                    <div class="subtitle">Cel i misja: ${institution.description}.</div>
-                </div>
+                    <div class="col">
+                        <div class="title">Fundacja "${institution.name}"</div>
+                        <div class="subtitle">Cel i misja: ${institution.description}.</div>
+                    </div>
 
                 </c:forEach>
 

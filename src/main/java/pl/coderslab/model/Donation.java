@@ -2,12 +2,11 @@ package pl.coderslab.model;
 
 import lombok.Getter;
 import lombok.Setter;
-import sun.util.resources.LocaleData;
 
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.HashSet;
+import java.util.List;
 
 @Entity
 @Setter
@@ -21,7 +20,7 @@ public class Donation {
     private int quantity;
 
     @OneToMany
-    private HashSet<Category> categories;
+    private List<Category> categories;
 
     @ManyToOne
     private Institution institution;
