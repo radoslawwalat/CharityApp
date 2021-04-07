@@ -13,31 +13,8 @@
     <link rel="stylesheet" href="<c:url value="resources/css/style.css"/>"/>
 </head>
 <body>
-<header class="header--main-page">
-    <nav class="container container--70">
-        <ul class="nav--actions">
-            <li><a href="" class="btn btn--small btn--without-border">Zaloguj</a></li>
-            <li><a href="#" class="btn btn--small btn--highlighted">Załóż konto</a></li>
-        </ul>
 
-        <ul>
-            <li><a href="#" class="btn btn--without-border active">Start</a></li>
-            <li><a href="#" class="btn btn--without-border">O co chodzi?</a></li>
-            <li><a href="#" class="btn btn--without-border">O nas</a></li>
-            <li><a href="#" class="btn btn--without-border">Fundacje i organizacje</a></li>
-            <li><a href="#" class="btn btn--without-border">Kontakt</a></li>
-        </ul>
-    </nav>
-
-    <div class="slogan container container--90">
-        <div class="slogan--item">
-            <h1>
-                Zacznij pomagać!<br/>
-                Oddaj niechciane rzeczy w zaufane ręce
-            </h1>
-        </div>
-    </div>
-</header>
+<jsp:include page="common/header.jsp"/>
 
 <section class="stats">
     <div class="container container--85">
@@ -64,17 +41,20 @@
 
     <div class="steps--container">
         <div class="steps--item">
-            <span class="icon icon--hands"></span>
+            <span class="icon icon--hands">
+            </span>
             <h3>Wybierz rzeczy</h3>
             <p>ubrania, zabawki, sprzęt i inne</p>
         </div>
         <div class="steps--item">
-            <span class="icon icon--arrow"></span>
+            <span class="icon icon--arrow">
+            </span>
             <h3>Spakuj je</h3>
             <p>skorzystaj z worków na śmieci</p>
         </div>
         <div class="steps--item">
-            <span class="icon icon--glasses"></span>
+            <span class="icon icon--glasses">
+            </span>
             <h3>Zdecyduj komu chcesz pomóc</h3>
             <p>wybierz zaufane miejsce</p>
         </div>
@@ -137,28 +117,7 @@
 
 </section>
 
-<footer>
-    <div class="contact">
-        <h2>Skontaktuj się z nami</h2>
-        <h3>Formularz kontaktowy</h3>
-        <form class="form--contact">
-            <div class="form-group form-group--50"><input type="text" name="name" placeholder="Imię"/></div>
-            <div class="form-group form-group--50"><input type="text" name="surname" placeholder="Nazwisko"/></div>
-
-            <div class="form-group"><textarea name="message" placeholder="Wiadomość" rows="1"></textarea></div>
-
-            <button class="btn" type="submit">Wyślij</button>
-        </form>
-    </div>
-    <div class="bottom-line">
-        <span class="bottom-line--copy">Copyright &copy; 2018</span>
-        <div class="bottom-line--icons">
-            <a href="#" class="btn btn--small"><img src="images/icon-facebook.svg"/></a> <a href="#"
-                                                                                            class="btn btn--small"><img
-                src="images/icon-instagram.svg"/></a>
-        </div>
-    </div>
-</footer>
+<jsp:include page="common/footer.jsp"/>
 
 <script src="<c:url value="resources/js/app.js"/>"></script>
 </body>
