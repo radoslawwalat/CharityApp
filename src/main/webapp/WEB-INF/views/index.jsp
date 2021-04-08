@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -18,7 +19,7 @@
 <section class="stats">
     <div class="container container--85">
         <div class="stats--item">
-            <em>13</em>
+            <em>${quantityOfDonation}</em>
 
             <h3>Oddanych worków</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius est beatae, quod accusamus illum
@@ -26,7 +27,7 @@
         </div>
 
         <div class="stats--item">
-            <em>5</em>
+            <em>${quantityOfGoods}</em>
             <h3>Przekazanych darów</h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam magnam, sint nihil cupiditate quas
                 quam.</p>
@@ -86,27 +87,49 @@
             Możesz sprawdzić czym się zajmują.</p>
 
         <ul class="help--slides-items">
-            <li>
-                <c:forEach items="${InstitutionsColOne}" var="institution">
+            <c:forEach items="${institutions}" begin="0" end="${fn:length(institutions)}" step="2" varStatus="status">
+                <li>
                     <div class="col">
-                        <div class="title">Fundacja "${institution.name}"</div>
-                        <div class="subtitle">Cel i misja: ${institution.description}.</div>
+                        <div class="title">${institutions[status.index].name}</div>
+                        <div class="subtitle">${institutions[status.index].description}</div>
                     </div>
-
-                </c:forEach>
-
-
-            </li>
-
-            <li>
-                <c:forEach items="${InstitutionsColTwo}" var="item">
+                    <c:choose>
+                        <c:when test="${status.index < (fn:length(institutions)/2 + 1)}">
                     <div class="col">
-                        <div class="title">Fundacja "${item.name}"</div>
-                        <div class="subtitle">Cel i misja: ${item.description}.</div>
+                        <div class="title">${institutions[status.index+1].name}</div>
+                        <div class="subtitle">${institutions[status.index+1].description}</div>
                     </div>
-                </c:forEach>
+                        </c:when>
+                        <c:otherwise>
+                            <div>
 
-            </li>
+                            </div>
+                        </c:otherwise>
+
+                    </c:choose>
+                </li>
+            </c:forEach>
+<%--            <li>--%>
+<%--                <c:forEach items="${InstitutionsColOne}" var="institution">--%>
+<%--                <div class="col">--%>
+<%--                    <div class="title">Fundacja "${institution.name}"</div>--%>
+<%--                    <div class="subtitle">Cel i misja: ${institution.description}.</div>--%>
+<%--                </div>--%>
+
+<%--                </c:forEach>--%>
+
+
+<%--            </li>--%>
+
+<%--            <li>--%>
+<%--                <c:forEach items="${InstitutionsColTwo}" var="item">--%>
+<%--                    <div class="col">--%>
+<%--                        <div class="title">Fundacja "${item.name}"</div>--%>
+<%--                        <div class="subtitle">Cel i misja: ${item.description}.</div>--%>
+<%--                    </div>--%>
+<%--                </c:forEach>--%>
+
+<%--            </li>--%>
 
         </ul>
     </div>

@@ -32,4 +32,6 @@ public class Donation {
     private LocalTime pickUpTime;
     private String pickUpComment;
 
+    private byte fulfilled;
+
 }
