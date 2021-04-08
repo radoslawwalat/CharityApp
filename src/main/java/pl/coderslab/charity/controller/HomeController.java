@@ -44,6 +44,11 @@ public class HomeController {
         return donationRepository.countAllFulfilled();
     }
 
+    @ModelAttribute("institutions")
+    public List<Institution> returnAllInstitutions(){
+        return institutionRepository.findAll();
+    }
+
 
 
     @GetMapping("/")

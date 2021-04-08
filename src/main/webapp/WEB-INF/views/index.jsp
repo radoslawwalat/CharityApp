@@ -13,8 +13,20 @@
     <link rel="stylesheet" href="<c:url value="resources/css/style.css"/>"/>
 </head>
 <body>
+<header class="header--main-page">
 
-<jsp:include page="common/header.jsp"/>
+    <jsp:include page="common/header.jsp"/>
+
+    <div class="slogan container container--90">
+        <div class="slogan--item">
+            <h1>
+                Zacznij pomagać!<br/>
+                Oddaj niechciane rzeczy w zaufane ręce
+            </h1>
+        </div>
+    </div>
+</header>
+
 
 <section class="stats">
     <div class="container container--85">
@@ -101,6 +113,7 @@
                     </div>
                         </c:when>
                         <c:otherwise>
+<%--                             TODO klasa css bugfix class="col-blank"--%>
                             <div>
 
                             </div>
