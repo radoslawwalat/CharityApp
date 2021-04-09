@@ -19,17 +19,6 @@ public class HomeController {
     private final InstitutionRepository institutionRepository;
     private final DonationRepository donationRepository;
 
-    @ModelAttribute("InstitutionsColOne")
-    public List<Institution> returnAllInstitutionsOne(Model model){
-        List<Institution> all = institutionRepository.findAll();
-        return all.subList(0, (all.size() + 1)/2);
-    }
-    @ModelAttribute("InstitutionsColTwo")
-    public List<Institution> returnAllInstitutionsTwo(Model model){
-        List<Institution> all = institutionRepository.findAll();
-        return all.subList((all.size() + 1)/2, all.size());
-    }
-
     @ModelAttribute("quantityOfGoods")
     public int returnAllInstitutions(Model model){
         List<Donation> all = donationRepository.selectAllFulfilled();
@@ -39,6 +28,7 @@ public class HomeController {
         }
         return result;
     }
+
     @ModelAttribute("quantityOfDonation")
     public int countDonation(){
         return donationRepository.countAllFulfilled();

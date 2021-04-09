@@ -122,27 +122,6 @@
                     </c:choose>
                 </li>
             </c:forEach>
-<%--            <li>--%>
-<%--                <c:forEach items="${InstitutionsColOne}" var="institution">--%>
-<%--                <div class="col">--%>
-<%--                    <div class="title">Fundacja "${institution.name}"</div>--%>
-<%--                    <div class="subtitle">Cel i misja: ${institution.description}.</div>--%>
-<%--                </div>--%>
-
-<%--                </c:forEach>--%>
-
-
-<%--            </li>--%>
-
-<%--            <li>--%>
-<%--                <c:forEach items="${InstitutionsColTwo}" var="item">--%>
-<%--                    <div class="col">--%>
-<%--                        <div class="title">Fundacja "${item.name}"</div>--%>
-<%--                        <div class="subtitle">Cel i misja: ${item.description}.</div>--%>
-<%--                    </div>--%>
-<%--                </c:forEach>--%>
-
-<%--            </li>--%>
 
         </ul>
     </div>

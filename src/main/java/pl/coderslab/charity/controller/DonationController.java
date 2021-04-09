@@ -27,7 +27,10 @@ public class DonationController {
         return categoryRepository.findAll();
     }
 
-
+    @ModelAttribute("institutions")
+    public List<Institution> returnAllInstitutions(){
+        return institutionRepository.findAll();
+    }
 
     @GetMapping("/donate")
     public String donationForm(Model model){
@@ -36,10 +39,10 @@ public class DonationController {
         return "donationForm";
     }
 
+
     @PostMapping("/donate")
-    public String donationFormHandle(Model model){
-        Donation donation = new Donation();
-        model.addAttribute("donation", donation);
-        return "donationForm";
+    public String donationFormHandle(@ModelAttribute("donation") Donation donation, Model model){
+        System.out.println("received: "+ donation);
+        return "redirect:/";
     }
 }

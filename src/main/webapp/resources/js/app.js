@@ -1,6 +1,46 @@
 document.addEventListener("DOMContentLoaded", function() {
 
   /**
+   * styling of Spring Form checkboxes
+   */
+  $('.springcheckbox').unbind('click').bind('click', function() {
+    if ($(this).hasClass('active')) {
+      $(this).css('background-color', 'white');
+      $(this).removeClass('active');
+    } else {
+      $(this).addClass('active');
+      $(this).css('background-color', '#f9c910');
+    }
+  });
+
+
+  $('.summaryBtn').click(function () {
+    var things = $('.things').attr('value').name;
+    $('#summaryThings').text(things);
+
+    $('#summaryQuantity').text($('.quantity').val());
+
+    // var inst = $('.institution').attr('class').replace('institution ','');
+    // $('#summaryInstitution').text(inst);
+    //
+    $('#summaryStreet').text($('.street').val());
+    //
+    $('#summaryCity').text($('.city').val());
+    //
+    // $('#summaryZipcode').text($('.zipcode').val());
+    //
+    // $('#summaryPickupdate').text($('.pickupdate').val());
+    //
+    // $('#summaryPickuptime').text($('.pickuptime').val());
+    //
+    // $('#summaryPickupcomment').text($('.pickupcomment').val());
+  });
+
+  $(".quantity").attr({
+    "type" : "number",
+  });
+
+  /**
    * Form Select
    */
   class FormSelect {
@@ -68,7 +108,6 @@ document.addEventListener("DOMContentLoaded", function() {
   document.querySelectorAll(".form-group--dropdown select").forEach(el => {
     new FormSelect(el);
   });
-
   /**
    * Hide elements when clicked on document
    */

@@ -512,6 +512,9 @@ h2:after {
 .btn.active {
   border: 1px solid #3c3c3c;
 }
+.springcheckbox {
+  margin-right: 30px;
+}
 
 /* line 1, scss/modules/_forms.scss */
 form {
@@ -601,7 +604,7 @@ form .form-group--checkbox label {
 form .form-group--checkbox input {
   position: absolute;
   opacity: 0;
-  display: none;
+
 }
 
 /* line 64, scss/modules/_forms.scss */
