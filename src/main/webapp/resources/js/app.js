@@ -15,25 +15,30 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
   $('.summaryBtn').click(function () {
-    var things = $('.things').attr('value').name;
-    $('#summaryThings').text(things);
+
+    var thingsJoined = "";
+    $('input[type=checkbox]:checked').each(function() {
+      thingsJoined +=($(this).attr('class').replace('things ','')) + "<br>";
+    })
+
+    $('#summaryThings').html(thingsJoined);
 
     $('#summaryQuantity').text($('.quantity').val());
 
-    // var inst = $('.institution').attr('class').replace('institution ','');
-    // $('#summaryInstitution').text(inst);
+    var inst = $('input[type=radio]:checked').attr('class').replace('institution ','');
+    $('#summaryInstitution').text(inst);
     //
     $('#summaryStreet').text($('.street').val());
     //
     $('#summaryCity').text($('.city').val());
     //
-    // $('#summaryZipcode').text($('.zipcode').val());
+    $('#summaryZipcode').text($('.zipcode').val());
     //
-    // $('#summaryPickupdate').text($('.pickupdate').val());
+    $('#summaryPickupdate').text($('.pickupdate').val());
     //
-    // $('#summaryPickuptime').text($('.pickuptime').val());
+    $('#summaryPickuptime').text($('.pickuptime').val());
     //
-    // $('#summaryPickupcomment').text($('.pickupcomment').val());
+    $('#summaryPickupcomment').text($('.pickupcomment').val());
   });
 
   $(".quantity").attr({
