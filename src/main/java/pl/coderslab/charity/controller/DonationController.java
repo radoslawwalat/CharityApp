@@ -10,6 +10,7 @@ import pl.coderslab.charity.model.Category;
 import pl.coderslab.charity.model.Donation;
 import pl.coderslab.charity.model.Institution;
 import pl.coderslab.charity.repository.CategoryRepository;
+import pl.coderslab.charity.repository.DonationRepository;
 import pl.coderslab.charity.repository.InstitutionRepository;
 
 import java.util.List;
@@ -19,6 +20,7 @@ import java.util.List;
 public class DonationController {
     private final CategoryRepository categoryRepository;
     private final InstitutionRepository institutionRepository;
+    private final DonationRepository donationRepository;
 
 
 
@@ -39,10 +41,9 @@ public class DonationController {
         return "donationForm";
     }
 
-
     @PostMapping("/donate")
-    public String donationFormHandle(@ModelAttribute("donation") Donation donation, Model model){
-        System.out.println("received: "+ donation);
-        return "redirect:/";
+    public String donationFormHandle(@ModelAttribute("donation") Donation donation){
+        donationRepository.save(donation);
+        return "donationFinish";
     }
 }
