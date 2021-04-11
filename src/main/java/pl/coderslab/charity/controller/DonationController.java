@@ -38,12 +38,12 @@ public class DonationController {
     public String donationForm(Model model){
         Donation donation = new Donation();
         model.addAttribute("donation", donation);
-        return "donationForm";
+        return "donation/donationForm";
     }
 
     @PostMapping("/donate")
     public String donationFormHandle(@ModelAttribute("donation") Donation donation){
         donationRepository.save(donation);
-        return "donationFinish";
+        return "donation/donationFinish";
     }
 }
