@@ -25,10 +25,21 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     public void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests()
-                .and().formLogin().loginPage("/login").defaultSuccessUrl("/UDALOSIEE", true)
-                .and().logout().logoutSuccessUrl("/")
+
+            http
+                .authorizeRequests()
+                    .antMatchers("/admin").hasAnyRole("ADMIN")
+                    .antMatchers("/profile").hasAnyRole("USER", "ADMIN")
+                    .and()
+                .formLogin()
+                    .loginPage("/login")
+                    .defaultSuccessUrl("/default", true)
+                    .and()
+                .logout()
+                    .logoutSuccessUrl("/")
                 .permitAll()
-                .and().exceptionHandling().accessDeniedPage("/404");
+                    .and()
+                .exceptionHandling()
+                    .accessDeniedPage("/login");
     }
 }

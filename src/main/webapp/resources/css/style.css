@@ -1138,11 +1138,13 @@ header nav ul.nav--actions .logged-user ul {
 header nav ul.nav--actions .logged-user ul li {
   border-left: 1px solid #3c3c3c;
   border-right: 1px solid #3c3c3c;
+
 }
 
 /* line 53, scss/modules/_navigation.scss */
 header nav ul.nav--actions .logged-user ul li:first-of-type {
   border-top: 1px solid #3c3c3c;
+
 }
 
 /* line 57, scss/modules/_navigation.scss */
@@ -1154,6 +1156,7 @@ header nav ul.nav--actions .logged-user ul li:last-of-type {
 header nav ul.nav--actions .logged-user ul a {
   display: inline-block;
   padding: 6px;
+
 }
 
 /* line 69, scss/modules/_navigation.scss */

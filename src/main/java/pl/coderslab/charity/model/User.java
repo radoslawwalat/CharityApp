@@ -3,10 +3,7 @@ package pl.coderslab.charity.model;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.Email;
 
 @Entity
@@ -22,6 +19,9 @@ public class User {
     private String firstname;
     private String lastname;
     private String password;
+
+    @ManyToOne
+    private Role role;
 
     @Email
     private String email;
