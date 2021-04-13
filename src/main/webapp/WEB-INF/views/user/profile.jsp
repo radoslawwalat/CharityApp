@@ -27,7 +27,7 @@
 </header>
 
 <section>
-    <a href="/admin/institutions" class="btn btn--large btn--without-border">Lista fundacji!</a>
+    <a href="/profile/editInfo" class="btn btn--large btn--without-border">Edytuj Dane</a>
 </section>
 
 
