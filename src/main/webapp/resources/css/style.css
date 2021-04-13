@@ -497,6 +497,9 @@ h2:after {
 .btn--without-border {
   border: 1px solid transparent;
 }
+.width-33 {
+  width: 33%;
+}
 
 /* line 32, scss/modules/_buttons.scss */
 .btn--without-border:hover {

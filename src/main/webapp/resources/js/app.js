@@ -1,6 +1,13 @@
 document.addEventListener("DOMContentLoaded", function() {
 
   /**
+   * Data tables
+   */
+  $(document).ready( function () {
+    $('#table_id').DataTable();
+  } );
+
+  /**
    * styling of Spring Form checkboxes
    */
   $('.springcheckbox').unbind('click').bind('click', function() {

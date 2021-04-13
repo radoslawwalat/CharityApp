@@ -1,3 +1,10 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: radek
+  Date: 12/04/2021
+  Time: 21:15
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
@@ -20,14 +27,16 @@
     <div class="slogan container container--90">
         <div class="slogan--item">
             <h1>
-                Twój profil!
+                Panel Administratora!
             </h1>
         </div>
     </div>
 </header>
 
 <section>
-    <a href="/admin/institutions" class="btn btn--large btn--without-border">Lista fundacji!</a>
+    <a href="/admin/institutions" class="btn btn--large btn--without-border width-33">Zarządzaj fundacjami</a>
+    <a href="/admin/admins" class="btn btn--large btn--without-border width-33">Zarządzaj adminami</a>
+    <a href="/admin/users" class="btn btn--large btn--without-border width-33">Zarządzaj użytkownikami</a>
 </section>
 
 

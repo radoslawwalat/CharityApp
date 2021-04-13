@@ -20,7 +20,7 @@ public class HomeController {
     private final DonationRepository donationRepository;
 
     @ModelAttribute("quantityOfGoods")
-    public int returnAllInstitutions(Model model){
+    public int countQuantityOfGoods(){
         List<Donation> all = donationRepository.selectAllFulfilled();
         int result = 0;
         for (Donation don : all) {
