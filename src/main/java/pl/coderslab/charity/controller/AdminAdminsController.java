@@ -23,8 +23,7 @@ public class AdminAdminsController {
         return userRepository.selectAllAdmins();
     }
 
-    @ModelAttribute("users")
-    public List<User> returnAllUsers() { return userRepository.findAll(); }
+
 
     @GetMapping("/admin/admins")
     public String showAdmins(Model model){
@@ -53,5 +52,7 @@ public class AdminAdminsController {
         userRepository.deleteById(id);
         return "redirect:/admin/admins";
     }
+
+
 
 }

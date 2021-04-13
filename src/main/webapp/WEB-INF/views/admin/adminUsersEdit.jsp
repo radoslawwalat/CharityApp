@@ -6,8 +6,8 @@
     <title>Title</title>
 </head>
 <body>
-<h1>Edytujesz Admina o id: ${user.id}, oraz nicku: ${user.username}</h1>
-<form:form modelAttribute="user" method="post" action="/admin/updateAdmin">
+<h1>Edytujesz Użytkownika o id: ${user.id}, oraz nicku: ${user.username}</h1>
+<form:form modelAttribute="user" method="post" action="/admin/updateUser">
     <form:hidden path="id"/>
     <form:hidden path="password"/>
     <form:hidden path="role"/>

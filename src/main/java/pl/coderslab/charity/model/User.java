@@ -2,7 +2,6 @@ package pl.coderslab.charity.model;
 
 import lombok.Getter;
 import lombok.Setter;
-
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 
@@ -20,11 +19,15 @@ public class User {
     private String lastname;
     private String password;
 
+
     @ManyToOne
     private Role role;
 
     @Email
     private String email;
+
+    @Column(name = "blocked", nullable = false, columnDefinition = "int default 0")
+    private int blocked;
 
 
 
