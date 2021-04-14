@@ -28,6 +28,8 @@
 
 <section>
     <a href="/profile/editInfo" class="btn btn--large btn--without-border">Edytuj Dane</a>
+    <a href="/profile/editPassword" class="btn btn--large btn--without-border">Edytuj Hasło</a>
+    <a href="/profile/donations" class="btn btn--large btn--without-border">Edytuj Dary</a>
 </section>
 
 

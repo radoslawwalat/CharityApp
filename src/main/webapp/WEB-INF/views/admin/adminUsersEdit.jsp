@@ -10,7 +10,7 @@
 <form:form modelAttribute="user" method="post" action="/admin/updateUser">
     <form:hidden path="id"/>
     <form:hidden path="password"/>
-    <form:hidden path="role"/>
+    <form:select path="role" items="${roles}" itemLabel="display" itemValue="id"/>
     <form:hidden path="blocked"/>
     <form:input path="username" type="text" placeholder="Nazwa Użytkownika"/>
     <form:input path="firstname" type="text" placeholder="Imię"/>

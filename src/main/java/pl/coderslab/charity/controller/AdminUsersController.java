@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import pl.coderslab.charity.model.User;
+import pl.coderslab.charity.repository.RoleRepository;
 import pl.coderslab.charity.repository.UserRepository;
 import pl.coderslab.charity.service.UserService;
 
@@ -19,6 +20,7 @@ public class AdminUsersController {
 
     private final UserRepository userRepository;
     private final UserService userService;
+    private final RoleRepository roleRepository;
 
     @ModelAttribute("users")
     public List<User> returnAllUsers() { return userRepository.selectAllUsers(); }
@@ -41,6 +43,7 @@ public class AdminUsersController {
     @GetMapping("/admin/users/edit/{id}")
     public String editUser(@PathVariable long id, Model model) {
         model.addAttribute("user", userRepository.findById(id).get());
+        model.addAttribute("roles", roleRepository.findAll());
         return "admin/adminUsersEdit";
 
     }

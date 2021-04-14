@@ -18,6 +18,6 @@
     <button type="submit">Edytuj</button>
 </form:form>
 
-<a href="/admin"><- Panel administratora</a>
+<a href="/profile"><- Panel profilu</a>
 </body>
 </html>

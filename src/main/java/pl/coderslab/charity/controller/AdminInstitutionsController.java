@@ -14,7 +14,7 @@ import java.util.List;
 
 @Controller
 @AllArgsConstructor
-public class AdminInstitutionController {
+public class AdminInstitutionsController {
 
     private final InstitutionRepository institutionRepository;
 
