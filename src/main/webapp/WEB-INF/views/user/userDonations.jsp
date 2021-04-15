@@ -45,12 +45,27 @@
             <td>${dono.street}</td>
             <td>${dono.zipCode}</td>
             <td>${dono.pickUpComment}</td>
-            <td>${dono.fulfilled}</td>
+            <td><c:choose>
+                <c:when test="${dono.fulfilled == 0}">
+                    <a href="/profile/donations/fulfill/${dono.id}">Niedoręczony</a>
+                </c:when>
+                <c:otherwise>
+                    <a href="/profile/donations/fulfill/${dono.id}">Doręczony</a>
+                </c:otherwise>
+            </c:choose>
+            </td>
 
             <td>
                 <a href="/profile/donations/delete/${dono.id}">Usuń</a>
                 <a href="/profile/donations/edit/${dono.id}">Edytuj</a>
-                <a href="/profile/donations/fulfill/${dono.id}">Odebrany</a>
+                <c:choose>
+                    <c:when test="${dono.fulfilled == 0}">
+                        <a href="/profile/donations/fulfill/${dono.id}">Doręczony</a>
+                    </c:when>
+                    <c:otherwise>
+                        <a href="/profile/donations/fulfill/${dono.id}">Niedoręczony</a>
+                    </c:otherwise>
+                </c:choose>
             </td>
 
         </tr>
