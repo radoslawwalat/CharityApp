@@ -106,7 +106,12 @@ public class UserController {
 
         if (passwordEncoder.matches(changePasswordForm.getOldPassword(), loggedUser.getPassword())) {
             loggedUser.setPassword(changePasswordForm.getPassword());
-            userService.saveUser(loggedUser);
+
+            if (loggedUser.getRole().getName().equals("ROLE_ADMIN")) {
+                userService.saveAdmin(loggedUser);
+            } else {
+                userService.saveUser(loggedUser);
+            }
             return "redirect:/profile";
         } else {
             // password dont match

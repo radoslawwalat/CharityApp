@@ -27,9 +27,9 @@
 </header>
 
 <section>
-    <a href="/profile/editInfo" class="btn btn--large btn--without-border">Edytuj Dane</a>
-    <a href="/profile/editPassword" class="btn btn--large btn--without-border">Edytuj Hasło</a>
-    <a href="/profile/donations" class="btn btn--large btn--without-border">Edytuj Dary</a>
+    <a href="/profile/editInfo" class="btn btn--large btn--without-border width-33">Edytuj Dane</a>
+    <a href="/profile/editPassword" class="btn btn--large btn--without-border width-33">Edytuj Hasło</a>
+    <a href="/profile/donations" class="btn btn--large btn--without-border width-33">Edytuj Dary</a>
 </section>
 
 
