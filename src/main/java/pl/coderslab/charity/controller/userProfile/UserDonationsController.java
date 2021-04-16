@@ -57,21 +57,6 @@ public class UserDonationsController {
         return "user/userDonations";
     }
 
-    @GetMapping("/profile/donations/edit/{id}")
-    public String editDonation(@PathVariable long id, Model model){
-
-        model.addAttribute("donation", donationRepository.findById(id).get());
-
-        return "user/userDonationEdit";
-
-    }
-    @PostMapping("/profile/updateDonation")
-    public String handleEditDonation(@ModelAttribute Donation donation){
-
-        donationRepository.save(donation);
-
-        return "redirect:/profile/donations";
-    }
 
     @GetMapping("/profile/donations/fulfill/{id}")
     private String switchFulfill(@PathVariable long id){

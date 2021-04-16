@@ -865,6 +865,8 @@ header.header--main-page {
   height: 100vh;
 }
 
+
+
 @media (min-width: 990px) and (max-width: 1230px) {
   /* line 2, scss/modules/_header.scss */
   header.header--main-page {
@@ -1085,6 +1087,17 @@ header nav {
 
 /* line 9, scss/modules/_navigation.scss */
 header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.8rem;
+}
+
+.datatableUl {
+  text-align: center;
   list-style: none;
   padding: 0;
   margin: 0;

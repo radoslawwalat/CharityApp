@@ -5,10 +5,20 @@
 <head>
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="<c:url value="/resources/css/style.css"/>"/>
 </head>
 <body>
-<h1>Panel zarządzania darami</h1>
+<header>
 
+    <jsp:include page="../common/header.jsp"/>
+
+</header>
+<section class="steps">
+    <h2>Panel zarządzania darami!</h2>
 <table id="table_id" class="display">
     <thead>
     <tr>
@@ -22,7 +32,7 @@
         <th>Ulica</th>
         <th>Kod Pocztowy</th>
         <th>Komentarz</th>
-        <th>Doręczony(1 = tak)</th>
+        <th>Status</th>
         <th>Akcje</th>
 
     </tr>
@@ -47,25 +57,26 @@
             <td>${dono.pickUpComment}</td>
             <td><c:choose>
                 <c:when test="${dono.fulfilled == 0}">
-                    <a href="/profile/donations/fulfill/${dono.id}">Niedoręczony</a>
+                    Niedoręczony
                 </c:when>
                 <c:otherwise>
-                    <a href="/profile/donations/fulfill/${dono.id}">Doręczony</a>
+                    Doręczony
                 </c:otherwise>
             </c:choose>
             </td>
 
             <td>
-                <a href="/profile/donations/delete/${dono.id}">Usuń</a>
-                <a href="/profile/donations/edit/${dono.id}">Edytuj</a>
+                <ul class="nav--actions datatableUl">
+                <li><a href="/profile/donations/delete/${dono.id}" class="btn btn--small">Usuń</a></li>
                 <c:choose>
                     <c:when test="${dono.fulfilled == 0}">
-                        <a href="/profile/donations/fulfill/${dono.id}">Doręczony</a>
+                        <li><a href="/profile/donations/fulfill/${dono.id}" class="btn btn--small">Doręczony</a></li>
                     </c:when>
                     <c:otherwise>
-                        <a href="/profile/donations/fulfill/${dono.id}">Niedoręczony</a>
+                        <li><a href="/profile/donations/fulfill/${dono.id}" class="btn btn--small">Niedoręczony</a></li>
                     </c:otherwise>
                 </c:choose>
+                </ul>
             </td>
 
         </tr>
@@ -73,9 +84,14 @@
     </tbody>
 </table>
 
-<h1><a href="/donate"> Dodaj nowy dar</a></h1> <br>
+    <a href="/donate" class="btn btn--large">Dodaj nowy dar</a>
+    <a href="/profile" class="btn btn--large">Powrót do profilu</a>
+</section>
 
-<a href="/profile"><- Profil</a>
+
+
+<%-- TODO --%>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
