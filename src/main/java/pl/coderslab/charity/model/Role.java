@@ -19,4 +19,7 @@ public class Role {
     private String name;
     private String display;
 
+    public Long getId() {
+        return id;
+    }
 }

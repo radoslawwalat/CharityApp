@@ -67,7 +67,6 @@
 
             <td>
                 <ul class="nav--actions datatableUl">
-                <li><a href="/profile/donations/delete/${dono.id}" class="btn btn--small">Usuń</a></li>
                 <c:choose>
                     <c:when test="${dono.fulfilled == 0}">
                         <li><a href="/profile/donations/fulfill/${dono.id}" class="btn btn--small">Doręczony</a></li>
