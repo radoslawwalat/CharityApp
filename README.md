@@ -2,8 +2,6 @@
 
 An application for managing charity donations, with UIs for users, institutions and admins.
 
-Developed entirely based on a trello page of customer, in 3 day sprints under supervision of project owner (without direct help) in 2,5 weeks.
-
 Main technologies: Spring (Boot, Form, Mail, Security, Data JPA), Hibernate, jUnit, MySql, jQuerry.
 
 ### Sample Screenshots for this project: 
